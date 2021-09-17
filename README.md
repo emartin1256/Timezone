@@ -1,11 +1,5 @@
 # Timezone App
 
-- Overview
-- Setup
-- Technologies
-
-<img src="https://github.com/emartin1256/Timezone/blob/main/screenshots/main.png" width="400"/><img src="https://github.com/emartin1256/Timezone/blob/main/screenshots/search.png" width="400"/>
-
 ## Overview
 
 This is a live timezone app. Users can search for timezone information using the searchbar and results show dynamically when typing.
@@ -46,3 +40,5 @@ This app was built using:
 
 - Client-side:
   - React
+
+<img src="https://github.com/emartin1256/Timezone/blob/main/screenshots/main.png" width="400"/><img src="https://github.com/emartin1256/Timezone/blob/main/screenshots/search.png" width="400"/>
