@@ -7,16 +7,19 @@ import Card from "./card";
 function App() {
   const [data, setData] = useState({});
   const [filteredData, setFilteredData] = useState(data);
+
   const getData = async () => {
     let response = await axios.get("http://localhost:4041/zones");
     setData(response.data);
     setFilteredData(response.data);
     return response.data;
   };
+
   useEffect(() => {
     let data = getData();
     setData(data);
   }, []);
+
   const handleSearch = (event) => {
     let value = event.target.value.toLowerCase();
     var countries = JSON.parse(
@@ -25,15 +28,12 @@ function App() {
       })
     );
     let result = [];
-    console.log(value);
     result = countries.filter((data) => {
       return data.Name.search(value) !== -1;
     });
-
-    // console.log(result);
     setFilteredData(result);
-    console.log(filteredData);
   };
+
   return (
     <div className="container">
       <div className="searchbar">

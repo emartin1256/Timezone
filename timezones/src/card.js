@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 function Index(props) {
   const [curTime, setCurTime] = useState(new Date().toLocaleTimeString());
   const [localTime, setlocalTime] = useState(curTime);
+
   useEffect(() => {
     var timer = setInterval(
       () => setCurTime(new Date().toLocaleTimeString()),
@@ -13,6 +14,7 @@ function Index(props) {
       clearInterval(timer);
     };
   });
+
   const setTime = () => {
     var time = curTime;
     var offSet = props.timezones.Hours;
@@ -26,6 +28,7 @@ function Index(props) {
     }
     setlocalTime(newTime);
   };
+
   return (
     <div className="card">
       <div className="zone">
@@ -33,7 +36,6 @@ function Index(props) {
         <h3>GMT{props.timezones.Hours}</h3>
       </div>
       <div className="time">
-        {/* <p>17:30:47</p> */}
         <p>{localTime}</p>
       </div>
     </div>
